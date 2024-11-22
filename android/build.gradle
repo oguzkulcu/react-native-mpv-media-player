@@ -48,7 +48,8 @@ task compileMpvAmd64(type: Exec) {
 }
 
 preBuild.dependsOn compileMpvAmd64
-compileMpvAmd64.dependsOn compileMpvi686
+compileMpvAmd64.dependsOn compileMpvArm64
+compileMpvArm64.dependsOn compileMpvi686
 compileMpvi686.dependsOn compileMpv
 compileMpv.dependsOn downloadMpv
 
