@@ -32,6 +32,11 @@ task compileMpv(type: Exec) {
     commandLine './buildall.sh'
 }
 
+task compileMpvArm64(type: Exec) {
+    workingDir '../buildscripts/'
+    commandLine './buildall.sh', '--arch', 'arm64'
+}
+
 task compileMpvi686(type: Exec) {
     workingDir '../buildscripts/'
     commandLine './buildall.sh', '--arch', 'x86'
@@ -108,7 +113,7 @@ android {
       }
     }
   }
-    
+
   externalNativeBuild {
     cmake {
       path "$projectDir/src/main/jni/CMakeLists.txt"
