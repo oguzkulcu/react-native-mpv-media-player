@@ -99,9 +99,9 @@ public class VideoEventObserver implements MPVLib.EventObserver {
 
   public void event(int eventId) {
     Log.i(TAG, "event() called with id: " + eventId);
-    switch (prop) {
+    switch (eventId) {
       case mpvEventId.MPV_EVENT_FILE_LOADED:
-        this.emitFileLoaded();
+     //   this.emitFileLoaded();
         break;
       default: break;
     }
